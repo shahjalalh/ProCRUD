@@ -31,7 +31,7 @@ $ python manage.py runserver
 **passworc**: shahjalal1
 
 ### Test
-To run the test, execute following command from your test
+To run the test, execute following command from your console
 
 ```sh
 $ coverage run manage.py test crud_app -v 2
