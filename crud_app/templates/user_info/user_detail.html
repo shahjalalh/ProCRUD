@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <div>
+        {% if user.created_date %}
+            <div>
+                {{ user.created_date }}
+            </div>
+        {% endif %}
+        <a href="{% url 'user_update' pk=user.pk %}">Update</a>
+        <h3>First Name: {{ user.first_name }}</h3>
+        <h3>Last Name: {{ user.last_name }}</h3>
+        <h3>Email: {{ user.email }}</h3>
+        <h3>Street: {{ user.street }}</h3>
+        <h3>House No: {{ user.house_no }}</h3>
+        <h3>Post Code: {{ user.postal_code }}</h3>
+        <h3>Town: {{ user.town }}</h3>
+        <h3>Country: {{ user.country }}</h3>
+        <h3>News Letter: {{ user.newsletter }}</h3>
+        <h3>Modified Date: {{ user.modified_date }}</h3>
+    </div>
+
+{% endblock %}

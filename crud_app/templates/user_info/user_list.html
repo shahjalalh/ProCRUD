@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <a href="{% url 'user_info' %}">New User</a>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <h1>User Lists</h1>
+    </div>
+
+    {% for user in users %}
+    <div>
+        <p>Created: {{ user.created_date }}</p>
+        <h3>First Name: {{ user.first_name }}</h3>
+        <h3>Last Name: {{ user.last_name }}</h3>
+        <h3>Email: {{ user.email }}</h3>
+        <h3><a href="{% url 'user_detail' pk=user.pk %}">Read Detail</a></h3>
+    </div>
+    {% endfor %}
+
+{% endblock %}
